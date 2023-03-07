@@ -1,9 +1,9 @@
 /** @type {import('next').NextConfig} */
 module.exports = {
   reactStrictMode: true,
-  images: {
-    unoptimized: true
-  },
+  // images: {
+  //   unoptimized: true
+  // },
   async rewrites() {
     return [
       {
