@@ -4,7 +4,7 @@ pipeline {
   stages {
     stage('Install application dependencies') {
       steps {
-        sh 'npm ci --legacy-peer-deps'
+        sh 'npm install'
       }
     }
 
