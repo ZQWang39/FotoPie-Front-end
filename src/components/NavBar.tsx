@@ -292,7 +292,7 @@ export default function Navbar( { isFixed, color = '#FFFFFF' }: NavbarProps ) {
                 bgcolor: fix ? "#3CB371" : "white",
               }}   
               >
-              Log In
+              <Link href="login">Log In</Link>
               </Button>
             )}
 
