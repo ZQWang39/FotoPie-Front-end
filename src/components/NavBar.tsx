@@ -287,7 +287,7 @@ export default function Navbar( { isFixed, color = '#FFFFFF' }: NavbarProps ) {
               <Button 
               variant="contained" 
               color="success"
-              href="login"
+              // href="login"
               sx={{
                 bgcolor: fix ? "#3CB371" : "white",
               }}   
