@@ -6,7 +6,7 @@ import Typography from "@mui/material/Typography";
 import IconButton from "@mui/material/IconButton";
 import Button from "@mui/material/Button"
 import Link from "../utils/Link";
-import Image from "next/image"
+// import Image from "next/image"
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import Badge from '@mui/material/Badge';
@@ -207,7 +207,7 @@ export default function Navbar( { isFixed, color = '#FFFFFF' }: NavbarProps ) {
           <Link
             href="/"
           >
-            <Image src="/logo.jpg" 
+            <img src="/logo.jpg" 
               style={{ borderRadius:10}}
               alt="Fotopie_Logo"
               width={45}
