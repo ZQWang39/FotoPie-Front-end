@@ -1,5 +1,7 @@
 pipeline {
-  agent any
+  agent {
+      label 'agent-laptop'
+  }
 
   stages{
     stage ('Code vaunerbility check') {
@@ -14,11 +16,10 @@ pipeline {
         )
       }
     }
-
      
     stage('Build Docker image') {
       when {
-          branch 'refs/heads/WI-66-Ziqi-testing'
+          branch 'master'
       }
       environment {
         BACKEND_API = credentials('BACKEND_API')
@@ -28,13 +29,13 @@ pipeline {
          sh 'docker build \
           --build-arg BACKEND_API=$BACKEND_API \
           --build-arg Get_Synonyms_API_Prefix=$Get_Synonyms_API_Prefix \
-          -t 123436089261.dkr.ecr.ap-southeast-2.amazonaws.com/fotopie-frontend-uat:latest .'  
+          -t 123436089261.dkr.ecr.ap-southeast-2.amazonaws.com/fotopie-frontend:latest .'  
       }
     }
 
     stage('Push Docker image to ECR') {
       when {
-          branch 'WI-66-Ziqi-testing'
+          branch 'master'
       }
     
       environment {
